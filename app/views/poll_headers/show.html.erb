@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @poll_header.age %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @poll_header.date %>
+</p>
+
+<%= link_to 'Edit', edit_poll_header_path(@poll_header) %> |
+<%= link_to 'Back', poll_headers_path %>

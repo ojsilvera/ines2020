@@ -1,0 +1,2 @@
+class PollHeader < ApplicationRecord
+end

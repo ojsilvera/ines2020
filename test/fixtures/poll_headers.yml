@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  edad: 1
+  date: 2020-11-10
+  institution: one
+  gender: one
+  group_field: one
+
+two:
+  edad: 1
+  date: 2020-11-10
+  institution: two
+  gender: two
+  group_field: two

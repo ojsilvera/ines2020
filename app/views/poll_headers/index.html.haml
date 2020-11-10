@@ -1,0 +1,29 @@
+%h1 Listing poll_headers
+
+%table
+  %thead
+    %tr
+      %th Edad
+      %th Date
+      %th Institution
+      %th Gender
+      %th Group field
+      %th
+      %th
+      %th
+
+  %tbody
+    - @poll_headers.each do |poll_header|
+      %tr
+        %td= poll_header.edad
+        %td= poll_header.date
+        %td= poll_header.institution
+        %td= poll_header.gender
+        %td= poll_header.group_field
+        %td= link_to 'Show', poll_header
+        %td= link_to 'Edit', edit_poll_header_path(poll_header)
+        %td= link_to 'Destroy', poll_header, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Poll header', new_poll_header_path

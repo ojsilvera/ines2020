@@ -1,0 +1,23 @@
+%h1 Listing inst_careers
+
+%table
+  %thead
+    %tr
+      %th Institution
+      %th Career
+      %th
+      %th
+      %th
+
+  %tbody
+    - @inst_careers.each do |inst_career|
+      %tr
+        %td= inst_career.institution
+        %td= inst_career.career
+        %td= link_to 'Show', inst_career
+        %td= link_to 'Edit', edit_inst_career_path(inst_career)
+        %td= link_to 'Destroy', inst_career, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Inst career', new_inst_career_path

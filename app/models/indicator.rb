@@ -1,2 +1,0 @@
-class Indicator < ApplicationRecord
-end

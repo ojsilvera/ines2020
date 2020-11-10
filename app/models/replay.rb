@@ -1,2 +1,0 @@
-class Replay < ApplicationRecord
-end

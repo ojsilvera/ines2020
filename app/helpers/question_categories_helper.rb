@@ -1,2 +1,0 @@
-module QuestionCategoriesHelper
-end

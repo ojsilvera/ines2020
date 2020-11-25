@@ -1,0 +1,21 @@
+%h1 Listing creers
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th
+      %th
+      %th
+
+  %tbody
+    - @creers.each do |creer|
+      %tr
+        %td= creer.name
+        %td= link_to 'Show', creer
+        %td= link_to 'Edit', edit_creer_path(creer)
+        %td= link_to 'Destroy', creer, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Creer', new_creer_path

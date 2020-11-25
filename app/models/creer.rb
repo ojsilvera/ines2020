@@ -1,0 +1,2 @@
+class Creer < ApplicationRecord
+end

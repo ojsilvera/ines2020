@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :faculties
+  resources :creers
+  resources :institutions
+  resources :groups
+  resources :genders
   resources :questions
   resources :indicators
   resources :factors

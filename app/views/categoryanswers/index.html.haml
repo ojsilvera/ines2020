@@ -1,0 +1,23 @@
+%h1 Listing categoryanswers
+
+%table
+  %thead
+    %tr
+      %th Replay
+      %th Category
+      %th
+      %th
+      %th
+
+  %tbody
+    - @categoryanswers.each do |categoryreplay|
+      %tr
+        %td= categoryreplay.replay
+        %td= categoryreplay.category
+        %td= link_to 'Show', categoryreplay
+        %td= link_to 'Edit', edit_categoryreplay_path(categoryreplay)
+        %td= link_to 'Destroy', categoryreplay, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Categoryreplay', new_categoryreplay_path

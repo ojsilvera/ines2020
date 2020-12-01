@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Replay:
+  = @categoryreplay.replay
+%p
+  %b Category:
+  = @categoryreplay.category
+
+= link_to 'Edit', edit_categoryreplay_path(@categoryreplay)
+\|
+= link_to 'Back', categoryanswers_path

@@ -1,0 +1,2 @@
+module CategoryanswersHelper
+end

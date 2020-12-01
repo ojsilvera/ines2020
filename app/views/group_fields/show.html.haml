@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Detalle:
+  = @group_field.detalle
+%p
+  %b Group:
+  = @group_field.group
+%p
+  %b Field:
+  = @group_field.field
+%p
+  %b Pollheader:
+  = @group_field.pollHeader
+
+= link_to 'Edit', edit_group_field_path(@group_field)
+\|
+= link_to 'Back', group_fields_path

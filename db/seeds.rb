@@ -46,3 +46,27 @@ Indicator.create([{ detalle: 'Barreras para el aprendizaje y la participación',
                   { detalle: 'Permanencia estudiantil', factor_id: 11 },
                   { detalle: 'Programas de educación inclusiva sostenibles', factor_id: 12 },
                   { detalle: 'Apoyo financiero a estudiantes', factor_id: 12 }])
+
+Replay.create([{ detalle: 'Existe Y Se Implementa' },
+               { detalle: 'Existe Y No Se Implementa' },
+               { detalle: 'No Existe' },
+               { detalle: 'No Sabe' },
+               { detalle: 'Siempre' },
+               { detalle: 'Algunas Veces' },
+               { detalle: 'Nunca' },
+               { detalle: 'Si' },
+               { detalle: 'No' }])
+
+Category.create([{ detalle: 'Exsistencia' },
+                 { detalle: 'Frecuencia' },
+                 { detalle: 'Reconocimiento' }])
+
+Gender.create([{ detalle: 'Masculino' },
+               { detalle: 'Femenino' },
+               { detalle: 'Lgbti' } ])
+
+Institution.create([{ name: 'Sena' },
+                    { name: 'Universidad autonoma del caribe' },
+                    { name: 'Universidad del atlantico' },
+                    { name: 'Universidad del norte' },
+                    { name: 'Universidad Simon Bolivar' },])

@@ -1,0 +1,2 @@
+module PollHeadersHelper
+end

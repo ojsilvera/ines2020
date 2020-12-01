@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  question: one
+  category_replay: one
+  poll_header: one
+
+two:
+  question: two
+  category_replay: two
+  poll_header: two

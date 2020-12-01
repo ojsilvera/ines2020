@@ -69,6 +69,6 @@ class PollBodiesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def poll_body_params
-      params.require(:poll_body).permit(:question_id, :category_replay_id, :poll_header_id)
+      params.require(:poll_body).permit(:question_id, :categoryreplay_id, :poll_header_id)
     end
 end

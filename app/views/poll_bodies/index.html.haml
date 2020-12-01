@@ -4,7 +4,7 @@
   %thead
     %tr
       %th Question
-      %th Category replay
+      %th Categoryreplay
       %th Poll header
       %th
       %th
@@ -14,7 +14,7 @@
     - @poll_bodies.each do |poll_body|
       %tr
         %td= poll_body.question
-        %td= poll_body.category_replay
+        %td= poll_body.categoryreplay
         %td= poll_body.poll_header
         %td= link_to 'Show', poll_body
         %td= link_to 'Edit', edit_poll_body_path(poll_body)

@@ -17,7 +17,7 @@ class GroupFieldsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create group_field" do
     assert_difference('GroupField.count') do
-      post group_fields_url, params: { group_field: { detalle: @group_field.detalle, field_id: @group_field.field_id, group_id: @group_field.group_id, pollHeader_id: @group_field.pollHeader_id } }
+      post group_fields_url, params: { group_field: { detalle: @group_field.detalle, field_id: @group_field.field_id, group_id: @group_field.group_id, poll_header_id: @group_field.poll_header_id } }
     end
 
     assert_redirected_to group_field_url(GroupField.last)
@@ -34,7 +34,7 @@ class GroupFieldsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update group_field" do
-    patch group_field_url(@group_field), params: { group_field: { detalle: @group_field.detalle, field_id: @group_field.field_id, group_id: @group_field.group_id, pollHeader_id: @group_field.pollHeader_id } }
+    patch group_field_url(@group_field), params: { group_field: { detalle: @group_field.detalle, field_id: @group_field.field_id, group_id: @group_field.group_id, poll_header_id: @group_field.poll_header_id } }
     assert_redirected_to group_field_url(@group_field)
   end
 

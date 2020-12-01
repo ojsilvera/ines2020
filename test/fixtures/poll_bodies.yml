@@ -2,10 +2,10 @@
 
 one:
   question: one
-  category_replay: one
+  categoryreplay: one
   poll_header: one
 
 two:
   question: two
-  category_replay: two
+  categoryreplay: two
   poll_header: two

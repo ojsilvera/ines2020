@@ -17,7 +17,7 @@ class PollBodiesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create poll_body" do
     assert_difference('PollBody.count') do
-      post poll_bodies_url, params: { poll_body: { category_replay_id: @poll_body.category_replay_id, poll_header_id: @poll_body.poll_header_id, question_id: @poll_body.question_id } }
+      post poll_bodies_url, params: { poll_body: { categoryreplay_id: @poll_body.categoryreplay_id, poll_header_id: @poll_body.poll_header_id, question_id: @poll_body.question_id } }
     end
 
     assert_redirected_to poll_body_url(PollBody.last)
@@ -34,7 +34,7 @@ class PollBodiesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update poll_body" do
-    patch poll_body_url(@poll_body), params: { poll_body: { category_replay_id: @poll_body.category_replay_id, poll_header_id: @poll_body.poll_header_id, question_id: @poll_body.question_id } }
+    patch poll_body_url(@poll_body), params: { poll_body: { categoryreplay_id: @poll_body.categoryreplay_id, poll_header_id: @poll_body.poll_header_id, question_id: @poll_body.question_id } }
     assert_redirected_to poll_body_url(@poll_body)
   end
 

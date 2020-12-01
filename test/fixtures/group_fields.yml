@@ -4,10 +4,10 @@ one:
   detalle: MyText
   group: one
   field: one
-  pollHeader: one
+  poll_header: one
 
 two:
   detalle: MyText
   group: two
   field: two
-  pollHeader: two
+  poll_header: two

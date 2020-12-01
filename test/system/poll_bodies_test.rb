@@ -14,7 +14,7 @@ class PollBodiesTest < ApplicationSystemTestCase
     visit poll_bodies_url
     click_on "New Poll Body"
 
-    fill_in "Category replay", with: @poll_body.category_replay_id
+    fill_in "Categoryreplay", with: @poll_body.categoryreplay_id
     fill_in "Poll header", with: @poll_body.poll_header_id
     fill_in "Question", with: @poll_body.question_id
     click_on "Create Poll body"
@@ -27,7 +27,7 @@ class PollBodiesTest < ApplicationSystemTestCase
     visit poll_bodies_url
     click_on "Edit", match: :first
 
-    fill_in "Category replay", with: @poll_body.category_replay_id
+    fill_in "Categoryreplay", with: @poll_body.categoryreplay_id
     fill_in "Poll header", with: @poll_body.poll_header_id
     fill_in "Question", with: @poll_body.question_id
     click_on "Update Poll body"

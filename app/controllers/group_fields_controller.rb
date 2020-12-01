@@ -69,6 +69,6 @@ class GroupFieldsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def group_field_params
-      params.require(:group_field).permit(:detalle, :group_id, :field_id, :pollHeader_id)
+      params.require(:group_field).permit(:detalle, :group_id, :field_id, :poll_header_id)
     end
 end

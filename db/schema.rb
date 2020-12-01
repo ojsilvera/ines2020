@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_01_204105) do
+ActiveRecord::Schema.define(version: 2020_12_01_222436) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -74,6 +74,7 @@ ActiveRecord::Schema.define(version: 2020_12_01_204105) do
 
   create_table "indicators", force: :cascade do |t|
     t.bigint "factor_id", null: false
+    t.string "detalle"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["factor_id"], name: "index_indicators_on_factor_id"
@@ -87,11 +88,11 @@ ActiveRecord::Schema.define(version: 2020_12_01_204105) do
 
   create_table "poll_bodies", force: :cascade do |t|
     t.bigint "question_id", null: false
-    t.bigint "categoryanswers_id", null: false
+    t.bigint "categoryreplay_id", null: false
     t.bigint "poll_header_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["categoryanswers_id"], name: "index_poll_bodies_on_categoryanswers_id"
+    t.index ["categoryreplay_id"], name: "index_poll_bodies_on_categoryreplay_id"
     t.index ["poll_header_id"], name: "index_poll_bodies_on_poll_header_id"
     t.index ["question_id"], name: "index_poll_bodies_on_question_id"
   end
@@ -123,7 +124,7 @@ ActiveRecord::Schema.define(version: 2020_12_01_204105) do
   add_foreign_key "group_fields", "groups"
   add_foreign_key "group_fields", "poll_headers"
   add_foreign_key "indicators", "factors"
-  add_foreign_key "poll_bodies", "categoryanswers", column: "categoryanswers_id"
+  add_foreign_key "poll_bodies", "categoryanswers"
   add_foreign_key "poll_bodies", "poll_headers"
   add_foreign_key "poll_bodies", "questions"
   add_foreign_key "poll_headers", "genders"

@@ -17,7 +17,7 @@ class GroupFieldsTest < ApplicationSystemTestCase
     fill_in "Detalle", with: @group_field.detalle
     fill_in "Field", with: @group_field.field_id
     fill_in "Group", with: @group_field.group_id
-    fill_in "Pollheader", with: @group_field.pollHeader_id
+    fill_in "Poll header", with: @group_field.poll_header_id
     click_on "Create Group field"
 
     assert_text "Group field was successfully created"
@@ -31,7 +31,7 @@ class GroupFieldsTest < ApplicationSystemTestCase
     fill_in "Detalle", with: @group_field.detalle
     fill_in "Field", with: @group_field.field_id
     fill_in "Group", with: @group_field.group_id
-    fill_in "Pollheader", with: @group_field.pollHeader_id
+    fill_in "Poll header", with: @group_field.poll_header_id
     click_on "Update Group field"
 
     assert_text "Group field was successfully updated"

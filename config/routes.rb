@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   resources :poll_bodies
   resources :group_fields
-  resources :questions
   resources :poll_headers
+  resources :questions
   resources :indicators
   resources :categoryanswers
   resources :fields

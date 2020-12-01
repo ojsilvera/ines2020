@@ -69,4 +69,23 @@ Institution.create([{ name: 'Sena' },
                     { name: 'Universidad autonoma del caribe' },
                     { name: 'Universidad del atlantico' },
                     { name: 'Universidad del norte' },
-                    { name: 'Universidad Simon Bolivar' },])
+                    { name: 'Universidad Simon Bolivar' }])
+
+Group.create([{ name: 'Administrativo' },
+              { name: 'Docente' },
+              { name: 'Estudiante' }])
+
+Field.create([{ name: 'Facultad' },
+              { name: 'Departamento' },
+              { name: 'Cargo' },
+              { name: 'Dependencia' },
+              { name: 'Antigüedad en el cargo(años)' },
+              { name: 'Antigüedad en el cargo(meses)' },
+              { name: 'Antigüedad en la institución(años)' },
+              { name: 'Antigüedad en la institución(meses)' },
+              { name: 'Carrera' },
+              { name: 'Semestres' },
+              { name: 'Año de ingreso' },
+              { name: 'Semestre de ingreso' },
+              { name: 'Tipo de vinculación' },
+              { name: 'Horas a la semana' }])

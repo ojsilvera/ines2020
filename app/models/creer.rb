@@ -1,2 +1,0 @@
-class Creer < ApplicationRecord
-end

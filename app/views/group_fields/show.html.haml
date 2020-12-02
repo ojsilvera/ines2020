@@ -5,13 +5,13 @@
   = @group_field.detail
 %p
   %b Group:
-  = @group_field.group
+  = @group_field.group.name
 %p
   %b Field:
-  = @group_field.field
+  = @group_field.field.name
 %p
   %b Poll header:
-  = @group_field.poll_header
+  = @group_field.poll_header.id
 
 = link_to 'Edit', edit_group_field_path(@group_field)
 \|

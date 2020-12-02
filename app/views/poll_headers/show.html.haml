@@ -8,10 +8,10 @@
   = @poll_header.date
 %p
   %b Gender:
-  = @poll_header.gender
+  = @poll_header.gender.name
 %p
   %b Institution:
-  = @poll_header.institution
+  = @poll_header.institution.name
 
 = link_to 'Edit', edit_poll_header_path(@poll_header)
 \|

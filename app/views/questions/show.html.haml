@@ -5,10 +5,10 @@
   = @question.detail
 %p
   %b Category:
-  = @question.category
+  = @question.category.name
 %p
   %b Indicator:
-  = @question.indicator
+  = @question.indicator.description
 
 = link_to 'Edit', edit_question_path(@question)
 \|

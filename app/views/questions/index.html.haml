@@ -14,8 +14,8 @@
     - @questions.each do |question|
       %tr
         %td= question.detail
-        %td= question.category
-        %td= question.indicator
+        %td= question.category.name
+        %td= question.indicator.description
         %td= link_to 'Show', question
         %td= link_to 'Edit', edit_question_path(question)
         %td= link_to 'Destroy', question, :method => :delete, :data => { :confirm => 'Are you sure?' }

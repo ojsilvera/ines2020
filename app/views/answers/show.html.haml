@@ -1,0 +1,9 @@
+%p#notice= notice
+
+%p
+  %b Description:
+  = @replay.description
+
+= link_to 'Edit', edit_replay_path(@replay)
+\|
+= link_to 'Back', answers_path

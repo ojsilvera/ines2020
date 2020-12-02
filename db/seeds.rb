@@ -113,3 +113,15 @@ Question.create([{ detail: 'La institución de educación  superior cuenta con u
                  { detail: 'Las instalaciones y la infraestructura de la institución responden a las exigencias de la normatividad vigente. En particular las NTC.', category_id: 3, indicator_id: 23 },
                  { detail: 'La institución destina recursos y garantiza la sostenibilidad de las estrategias de educación inclusiva.', category_id: 2, indicator_id: 24 },
                  { detail: 'La institución cuenta con programas especiales o establece convenios de cooperación con entidades que financian el acceso y la permanencia de los estudiantes más proclives a ser excluidos del sistema (en relación con los grupos priorizados en los lineamientos de política de educación inclusiva del Ministerio de Educación Nacional).', category_id: 2, indicator_id: 25	 }])
+
+CategoryReplay.create([{replay_id: 1,  category_id: 1 },
+                       {replay_id: 2,  category_id: 1 },
+                       {replay_id: 3,  category_id: 1 },
+                       {replay_id: 4,  category_id: 1 },
+                       {replay_id: 5,  category_id: 2 },
+                       {replay_id: 6,  category_id: 2 },
+                       {replay_id: 7,  category_id: 2 },
+                       {replay_id: 8,  category_id: 3 },
+                       {replay_id: 4,  category_id: 2 },
+                       {replay_id: 4,  category_id: 3 },
+                       {replay_id: 9,  category_id: 3 }])

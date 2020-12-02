@@ -2,10 +2,10 @@
 
 %p
   %b Replay:
-  = @category_replay.replay
+  = @category_replay.replay.description
 %p
   %b Category:
-  = @category_replay.category
+  = @category_replay.category.name
 
 = link_to 'Edit', edit_category_replay_path(@category_replay)
 \|

@@ -2,13 +2,13 @@
 
 %p
   %b Poll header:
-  = @poll_body.poll_header
+  = @poll_body.poll_header.id
 %p
   %b Question:
-  = @poll_body.question
+  = @poll_body.question.detail
 %p
   %b Category replay:
-  = @poll_body.category_replay
+  = @poll_body.category_replay.replay.description
 
 = link_to 'Edit', edit_poll_body_path(@poll_body)
 \|

@@ -13,9 +13,9 @@
   %tbody
     - @poll_bodies.each do |poll_body|
       %tr
-        %td= poll_body.poll_header
-        %td= poll_body.question
-        %td= poll_body.category_replay
+        %td= poll_body.poll_header.id
+        %td= poll_body.question.detail
+        %td= poll_body.category_replay.replay.description
         %td= link_to 'Show', poll_body
         %td= link_to 'Edit', edit_poll_body_path(poll_body)
         %td= link_to 'Destroy', poll_body, :method => :delete, :data => { :confirm => 'Are you sure?' }

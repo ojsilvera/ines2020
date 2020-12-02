@@ -7,17 +7,17 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Factor.create([{ name: 'Mision proyecto institucional' },
-    { name: 'Estudiantes' },
-    { name: 'Profesores' },
-    { name: 'Procesos académicos' },
-    { name: 'Visibilidad nacional e internacional' },
-    { name: 'Espacion de investigación, innovación, y creación artística y cultural' },
-    { name: 'Pertinecia e impacto social' },
-    { name: 'Autoevaluación y Autorregulacón' },
-    { name: 'Bienestar institucional' },
-    { name: 'Organización, Gestión y administración' },
-    { name: 'Recursos de apoyo académico e infraestructura física' },
-    { name: 'Recursos financieros' }])
+               { name: 'Estudiantes' },
+               { name: 'Profesores' },
+               { name: 'Procesos académicos' },
+               { name: 'Visibilidad nacional e internacional' },
+               { name: 'Espacion de investigación, innovación, y creación artística y cultural' },
+               { name: 'Pertinecia e impacto social' },
+               { name: 'Autoevaluación y Autorregulacón' },
+               { name: 'Bienestar institucional' },
+               { name: 'Organización, Gestión y administración' },
+               { name: 'Recursos de apoyo académico e infraestructura física' },
+               { name: 'Recursos financieros' }])
 
 Indicator.create([{ description: 'Barreras para el aprendizaje y la participación', factor_id: 1 },
        { description: 'Identificación y caracterización de estudiantes desde la educación inclusiva', factor_id: 1 },

@@ -58,7 +58,7 @@ ActiveRecord::Schema.define(version: 2020_12_02_000045) do
     t.text "detail"
     t.bigint "group_id", null: false
     t.bigint "field_id", null: false
-    t.bigint "poll_header_id", null: false
+    t.string "poll_header_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["field_id"], name: "index_group_fields_on_field_id"
@@ -89,9 +89,9 @@ ActiveRecord::Schema.define(version: 2020_12_02_000045) do
   end
 
   create_table "poll_bodies", force: :cascade do |t|
-    t.bigint "poll_header_id", null: false
     t.bigint "question_id", null: false
     t.bigint "category_replay_id", null: false
+    t.string "poll_header_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["category_replay_id"], name: "index_poll_bodies_on_category_replay_id"
@@ -99,7 +99,8 @@ ActiveRecord::Schema.define(version: 2020_12_02_000045) do
     t.index ["question_id"], name: "index_poll_bodies_on_question_id"
   end
 
-  create_table "poll_headers", force: :cascade do |t|
+  create_table "poll_headers", id: false, force: :cascade do |t|
+    t.string "id", null: false
     t.integer "age"
     t.date "date"
     t.bigint "gender_id", null: false
@@ -107,6 +108,7 @@ ActiveRecord::Schema.define(version: 2020_12_02_000045) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["gender_id"], name: "index_poll_headers_on_gender_id"
+    t.index ["id"], name: "index_poll_headers_on_id", unique: true
     t.index ["institution_id"], name: "index_poll_headers_on_institution_id"
   end
 

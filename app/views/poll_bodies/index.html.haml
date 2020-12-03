@@ -13,7 +13,7 @@
   %tbody
     - @poll_bodies.each do |poll_body|
       %tr
-        %td= poll_body.poll_header.id
+        %td= poll_body.poll_header.code
         %td= poll_body.question.detail
         %td= poll_body.category_replay.replay.description
         %td= link_to 'Show', poll_body

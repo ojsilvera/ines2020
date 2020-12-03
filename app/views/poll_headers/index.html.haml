@@ -3,6 +3,7 @@
 %table
   %thead
     %tr
+      %th Code
       %th Age
       %th Date
       %th Gender
@@ -14,6 +15,7 @@
   %tbody
     - @poll_headers.each do |poll_header|
       %tr
+        %td= poll_header.id
         %td= poll_header.age
         %td= poll_header.date
         %td= poll_header.gender.name

@@ -7,7 +7,7 @@
     = f.input :detail
     = f.association :group, :label_method => lambda { |group| "#{group.id} | #{group.name}" }
     = f.association :field, :label_method => lambda { |field| "#{field.id} | #{field.name}" }
-    = f.association :poll_header, :label_method => lambda { |poll_header| "#{poll_header.code}" }
+    = f.association :poll_header, :label_method => lambda { |poll_header| "#{poll_header.id}" }
 
   .form-actions
     = f.button :submit

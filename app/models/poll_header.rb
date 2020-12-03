@@ -1,5 +1,5 @@
 class PollHeader < ApplicationRecord
-  self.primary_key = :code
+  self.primary_key = 'id'
 
   belongs_to :gender
   belongs_to :institution

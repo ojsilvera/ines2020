@@ -64,11 +64,11 @@ class PollHeadersController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_poll_header
-      @poll_header = PollHeader.find(params[:id])
+      @poll_header = PollHeader.find_by(params[:code])
     end
 
     # Only allow a list of trusted parameters through.
     def poll_header_params
-      params.require(:poll_header).permit(:age, :date, :gender_id, :institution_id)
+      params.require(:poll_header).permit(:code, :age, :date, :gender_id, :institution_id)
     end
 end

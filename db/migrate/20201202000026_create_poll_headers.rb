@@ -1,6 +1,7 @@
 class CreatePollHeaders < ActiveRecord::Migration[6.0]
   def change
-    create_table :poll_headers do |t|
+    create_table :poll_headers, id: false do |t|
+      t.string :code, null: false
       t.integer :age
       t.date :date
       t.references :gender, null: false, foreign_key: true
@@ -8,5 +9,6 @@ class CreatePollHeaders < ActiveRecord::Migration[6.0]
 
       t.timestamps
     end
+    add_index :poll_headers, :code, unique: true
   end
 end

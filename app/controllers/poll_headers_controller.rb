@@ -61,7 +61,7 @@ class PollHeadersController < ApplicationController
   private
   # Use callbacks to share common setup or constraints between actions.
   def set_poll_header
-    @poll_header = PollHeader.find_by(params[:id])
+    @poll_header = PollHeader.find(params[:id])
   end
 
   # Only allow a list of trusted parameters through.
@@ -71,5 +71,7 @@ class PollHeadersController < ApplicationController
 
     # parametros obligatorios para el manejo en base de datos
     params.require(:poll_header).permit(:age, :date, :gender_id, :institution_id)
+
+    # invocar todos los create desde el mismo controlador
   end
 end

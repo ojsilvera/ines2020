@@ -20,10 +20,7 @@
         %td= poll_header.date
         %td= poll_header.gender.name
         %td= poll_header.institution.name
-        %td= link_to 'Show', poll_header
-        %td= link_to 'Edit', edit_poll_header_path(poll_header)
-        %td= link_to 'Destroy', poll_header, :method => :delete, :data => { :confirm => 'Are you sure?' }
-
+        %td= link_to 'Group fields', new_group_field_path
 %br
 
 = link_to 'New Poll header', new_poll_header_path

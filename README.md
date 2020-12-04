@@ -1,2 +1,2 @@
 # ines2020
-automatizacion para la captura de datos de la encuesta ines de la fundacion unicornio
+Digitalizacion de los formatos de cuestionario del manual del indide de inclucion ines

@@ -22,7 +22,7 @@ class PollHeadersController < ApplicationController
   # POST /poll_headers
   # POST /poll_headers.json
   def create
-    @poll_header = PollHeader.new(poll_header_params)
+    @poll_header = PollHeader.new(poll_header_params.merge(id: SecureRandom.hex(2)))
     respond_to do |format|
       if @poll_header.save
         format.html { redirect_to @poll_header, notice: 'Poll header was successfully created.' }
@@ -66,9 +66,10 @@ class PollHeadersController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def poll_header_params
-    # id = SecureRandom.hex 2
     # asignar un valor de id aleatorio para el almacenamiento del poll_header en la base de datos
-    params[:poll_header][:id] = SecureRandom.hex 2
-    params.require(:poll_header).permit(:id, :age, :date, :gender_id, :institution_id)
+    # params[:poll_header][:id] = SecureRandom.hex 2
+
+    # parametros obligatorios para el manejo en base de datos
+    params.require(:poll_header).permit(:age, :date, :gender_id, :institution_id)
   end
 end

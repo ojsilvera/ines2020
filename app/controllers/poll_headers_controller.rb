@@ -9,8 +9,7 @@ class PollHeadersController < ApplicationController
 
   # GET /poll_headers/1
   # GET /poll_headers/1.json
-  def show
-  end
+  def show; end
 
   # GET /poll_headers/new
   def new
@@ -18,14 +17,12 @@ class PollHeadersController < ApplicationController
   end
 
   # GET /poll_headers/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /poll_headers
   # POST /poll_headers.json
   def create
-    @poll_header = PollHeader.new(poll_header_params)
-
+    @poll_header = PollHeader.new(poll_header_params.merge(id: SecureRandom.hex(2)))
     respond_to do |format|
       if @poll_header.save
         format.html { redirect_to @poll_header, notice: 'Poll header was successfully created.' }
@@ -62,13 +59,19 @@ class PollHeadersController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_poll_header
-      @poll_header = PollHeader.find_by(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_poll_header
+    @poll_header = PollHeader.find(params[:id])
+  end
 
-    # Only allow a list of trusted parameters through.
-    def poll_header_params
-      params.require(:poll_header).permit(:id, :age, :date, :gender_id, :institution_id)
-    end
+  # Only allow a list of trusted parameters through.
+  def poll_header_params
+    # asignar un valor de id aleatorio para el almacenamiento del poll_header en la base de datos
+    # params[:poll_header][:id] = SecureRandom.hex 2
+
+    # parametros obligatorios para el manejo en base de datos
+    params.require(:poll_header).permit(:age, :date, :gender_id, :institution_id)
+
+    # invocar todos los create desde el mismo controlador
+  end
 end

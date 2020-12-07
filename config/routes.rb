@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
+  #user-root
+  resources :form
+
+  # Admin
   resources :poll_bodies
   resources :group_fields
   resources :poll_headers
-  #param: :code
   resources :questions
   resources :indicators
   resources :category_answers
@@ -13,5 +16,4 @@ Rails.application.routes.draw do
   resources :factors
   resources :categories
   resources :answers
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

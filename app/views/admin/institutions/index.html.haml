@@ -1,0 +1,25 @@
+%h1 Listing institutions
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Total Population
+      %th Sample
+      %th
+      %th
+      %th
+
+  %tbody
+    - @institutions.each do |institution|
+      %tr
+        %td= institution.name
+        %td= institution.totalPopulation
+        %td= institution.sample
+        %td= link_to 'Show', admin_institution_path(institution)
+        %td= link_to 'Edit', edit_admin_institution_path(institution)
+        %td= link_to 'Destroy', admin_institution_path(institution), :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Institution', new_admin_institution_path

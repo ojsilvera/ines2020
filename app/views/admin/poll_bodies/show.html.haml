@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Poll header:
+  = @poll_body.poll_header.id
+%p
+  %b Question:
+  = @poll_body.question.detail
+%p
+  %b Category replay:
+  = @poll_body.category_replay.replay.description
+
+= link_to 'Edit', edit_admin_poll_body_path(@poll_body)
+\|
+= link_to 'Back', admin_poll_bodies_path

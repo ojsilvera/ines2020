@@ -1,0 +1,21 @@
+%h1 Listing factors
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th
+      %th
+      %th
+
+  %tbody
+    - @factors.each do |factor|
+      %tr
+        %td= factor.name
+        %td= link_to 'Show', admin_factor_path(factor)
+        %td= link_to 'Edit', edit_admin_factor_path(factor)
+        %td= link_to 'Destroy', admin_factor_path(factor), :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Factor', new_admin_factor_path

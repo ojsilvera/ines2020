@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Age:
+  = @poll_header.age
+%p
+  %b Date:
+  = @poll_header.date
+%p
+  %b Gender:
+  = @poll_header.gender.name
+%p
+  %b Institution:
+  = @poll_header.institution.name
+
+= link_to 'Edit', edit_admin_poll_header_path(@poll_header)
+\|
+= link_to 'Back', admin_poll_headers_path

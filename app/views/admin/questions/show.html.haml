@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Detail:
+  = @question.detail
+%p
+  %b Category:
+  = @question.category.name
+%p
+  %b Indicator:
+  = @question.indicator.description
+
+= link_to 'Edit', edit_admin_question_path(@question)
+\|
+= link_to 'Back', admin_questions_path

@@ -1,0 +1,26 @@
+%h1 Listing poll_bodies
+
+%table
+  %thead
+    %tr
+      %th Poll header
+      %th Question
+      %th Category replay
+      %th
+      %th
+      %th
+
+  %tbody
+    - @poll_bodies.each do |poll_body|
+      %tr
+        %td= poll_body.poll_header.id
+        %td= poll_body.question.detail
+        %td= poll_body.category_replay.replay.description
+        %td= link_to 'Show', admin_poll_body_path(poll_body)
+        %td= link_to 'Edit', edit_admin_poll_body_path(poll_body)
+        %td= link_to 'Destroy', admin_poll_body_path(poll_body), :method => :delete, :data => { :confirm => 'Are you sure?' }
+        %td= link_to 'Headers', admin_poll_headers_path
+
+%br
+
+= link_to 'New Poll body', new_admin_poll_body_path

@@ -1,0 +1,26 @@
+%h1 Listing poll_headers
+
+%table
+  %thead
+    %tr
+      %th Code
+      %th Age
+      %th Date
+      %th Gender
+      %th Institution
+      %th
+      %th
+      %th
+
+  %tbody
+    - @poll_headers.each do |poll_header|
+      %tr
+        %td= poll_header.id
+        %td= poll_header.age
+        %td= poll_header.date
+        %td= poll_header.gender.name
+        %td= poll_header.institution.name
+        %td= link_to 'Group fields', new_admin_group_field_path
+%br
+
+= link_to 'New Poll header', new_admin_poll_header_path

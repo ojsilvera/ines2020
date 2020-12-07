@@ -1,0 +1,12 @@
+-# frozen_string_literal: true
+= simple_form_for [:admin, @poll_body] do |f|
+  = f.error_notification
+  = f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present?
+
+  .form-inputs
+    = f.association :poll_header, :label_method => lambda { |poll_header| "#{poll_header.id}" }
+    = f.association :question, :label_method => lambda { |question| "#{question.id} | #{question.detail}" }
+    = f.association :category_replay, :label_method => lambda { |categoryReplay| "#{categoryReplay.category.id} | #{categoryReplay.replay.description}" }
+
+  .form-actions
+    = f.button :submit

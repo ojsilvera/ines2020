@@ -63,11 +63,11 @@ Gender.create([{ name: 'Masculino' },
     { name: 'Femenino' },
     { name: 'Otro' } ])
 
-Institution.create([{ name: 'Sena' },
-         { name: 'Universidad autonoma del caribe' },
-         { name: 'Universidad del atlantico' },
-         { name: 'Universidad del norte' },
-         { name: 'Universidad Simon Bolivar' }])
+Institution.create([{ name: 'Sena', totalPopulation: 3000, sample: 600 },
+         { name: 'Universidad autonoma del caribe', totalPopulation: 5000, sample: 500 },
+         { name: 'Universidad del atlantico', totalPopulation: 8000, sample: 800 },
+         { name: 'Universidad del norte', totalPopulation: 4500, sample: 800 },
+         { name: 'Universidad Simon Bolivar', totalPopulation: 1500, sample: 500 }])
 
 Group.create([{ name: 'Administrativo' },
    { name: 'Docente' },

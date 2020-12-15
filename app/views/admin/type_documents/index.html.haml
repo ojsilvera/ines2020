@@ -1,0 +1,23 @@
+%h1 Listing type_documents
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Abbreviation
+      %th
+      %th
+      %th
+
+  %tbody
+    - @type_documents.each do |type_document|
+      %tr
+        %td= type_document.name
+        %td= type_document.abbreviation
+        %td= link_to 'Show', admin_type_document_path(type_document)
+        %td= link_to 'Edit', edit_admin_type_document_path(type_document)
+        %td= link_to 'Destroy', admin_type_document_path(type_document), :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Type document', new_admin_type_document_path

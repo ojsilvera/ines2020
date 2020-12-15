@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @type_document.name
+%p
+  %b Abbreviation:
+  = @type_document.abbreviation
+
+= link_to 'Edit', edit_type_document_path(@type_document)
+\|
+= link_to 'Back', type_documents_path

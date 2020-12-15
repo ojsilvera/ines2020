@@ -17,5 +17,6 @@ Rails.application.routes.draw do
     resources :factors
     resources :categories
     resources :answers
+    resources :type_documents
   end
 end

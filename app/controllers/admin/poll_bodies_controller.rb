@@ -70,7 +70,7 @@ module Admin
 
       # Only allow a list of trusted parameters through.
       def poll_body_params
-        params.require(:poll_body).permit(:poll_header_id, :question_id, :category_replay_id)
+        params.require(:poll_body).permit(:poll_header_id, :question_id)
       end
   end
 end

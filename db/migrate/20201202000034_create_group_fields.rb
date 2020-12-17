@@ -5,7 +5,6 @@ class CreateGroupFields < ActiveRecord::Migration[6.0]
       # t.string :code, null: false, unique: true
       t.references :group, null: false, foreign_key: true
       t.references :field, null: false, foreign_key: true
-      t.references :poll_header, null: false, foreign_key: true, type: :string
 
       t.timestamps
     end

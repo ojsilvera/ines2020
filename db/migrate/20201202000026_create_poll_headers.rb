@@ -3,7 +3,6 @@ class CreatePollHeaders < ActiveRecord::Migration[6.0]
     create_table :poll_headers, id: false do |t|
       t.string :id, null: false
       t.integer :age
-      t.date :date
       t.references :gender, null: false, foreign_key: true
       t.references :institution, null: false, foreign_key: true
 

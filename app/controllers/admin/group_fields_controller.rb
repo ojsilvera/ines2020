@@ -70,7 +70,7 @@ module Admin
 
       # Only allow a list of trusted parameters through.
       def group_field_params
-        params.require(:group_field).permit(:detail, :group_id, :field_id, :poll_header_id)
+        params.require(:group_field).permit(:detail, :group_id, :field_id)
       end
   end
 end

@@ -6,7 +6,6 @@
       %th Detail
       %th Group
       %th Field
-      %th Poll header
       %th
       %th
       %th
@@ -17,7 +16,6 @@
         %td= group_field.detail
         %td= group_field.group.name
         %td= group_field.field.name
-        %td= group_field.poll_header.id
         %td= link_to 'Show', admin_group_field_path(group_field)
         %td= link_to 'Edit', edit_admin_group_field_path(group_field)
         %td= link_to 'Destroy', admin_group_field_path(group_field), :method => :delete, :data => { :confirm => 'Are you sure?' }
